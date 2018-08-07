@@ -9,5 +9,8 @@ module.exports  = (app) => {
     res.send(req.body);
     const check = require('../webhook/generalwebhook')(req.body);
   })
+  app.post('/webhookData',(req,res)=> {
+    res.send(req.body);
+  })
 
 }
