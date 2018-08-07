@@ -1,0 +1,22 @@
+{
+  "name": "webhook",
+  "version": "1.0.0",
+  "description": "a sample testing webhook app for slack bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "curl -X POST -H 'Content-type: application/json' --data '{'text':'Hello World'}' https://hooks.slack.com/services/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",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "webhook"
+  ],
+  "author": "ray",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eslint": "^5.3.0",
+    "express": "^4.16.3",
+    "node-fetch": "^2.2.0",
+    "nodemon": "^1.18.3"
+  }
+}
