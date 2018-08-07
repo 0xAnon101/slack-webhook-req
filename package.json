@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "a sample testing webhook app for slack bot",
   "main": "server.js",
+  "engines" : {
+    "node" :"10.7.0",
+    "npm" :"6.3.0"
+  },
   "scripts": {
     "test": "curl -X POST -H 'Content-type: application/json' --data '{'text':'Hello World'}' https://hooks.slack.com/services/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",
     "dev": "nodemon server.js"
