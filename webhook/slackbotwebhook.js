@@ -1,9 +1,10 @@
 const fetch = require('node-fetch');
+const SERVICE_KEY = require('../.env').SERVICE_KEY_BOT;
 
 module.exports = (payloadBot) => {
 
   let submitBotData = async () => {
-    const rawRes =  await fetch('https://hooks.slack.com/services/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', {
+    const rawRes =  await fetch(`https://hooks.slack.com/services/${SERVICE_KEY}`, {
       method: "POST",
       headers : {
         'Content-Type' : 'application/json',
