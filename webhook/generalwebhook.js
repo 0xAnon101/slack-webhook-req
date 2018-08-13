@@ -1,4 +1,6 @@
 const fetch = require('node-fetch');
+const SERVICE_KEY = require('../.env').SERVICE_KEY_GENERAL;
+
 
 module.exports = (payload) => {
   console.log(JSON.stringify(payload))
@@ -8,7 +10,7 @@ module.exports = (payload) => {
 }
 
   let submitData = async () => {
-    const rawResponse = await fetch('https://hooks.slack.com/services/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', {
+    const rawResponse = await fetch(`https://hooks.slack.com/services/${SERVICE_KEY}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
